@@ -14,7 +14,7 @@ const sizes = {
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 1000); // Use PerspectiveCamera instead of Camera
-camera.position.set(5, 5, 4);
+camera.position.set(5, 5, 10);
 scene.add(camera);
 
 // Environment map
@@ -54,7 +54,7 @@ gui.add(torusKnot.material, 'roughness', 0, 1);
 gui.add(torusKnot.material, 'metalness', 0, 1);
 
 const ortho = new THREE.Mesh(
-  new THREE.OctahedronGeometry(3),
+  new THREE.OctahedronGeometry(3.5),
   new THREE.MeshStandardMaterial({ roughness: 0.1, metalness: 1 })
 );
 ortho.position.x = 7;
